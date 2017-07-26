@@ -9,15 +9,16 @@
     "email": "jeannot@ammd.net"
   },
   "dependencies": {
-    "vmodule":"1.0.1",
+    "chokidar": "1.7.0",
     "electron-localshortcut": "2.0.0",
-    "osc": "2.2.0",
-    "yargs": "8.0.2",
-    "socket.io": "2.0.3",
     "express": "4.15.3",
     "jquery": "3.2.1",
-    "chokidar": "1.7.0",
-    "python-shell":"0.4.0"
+    "osc": "2.2.0",
+    "python-shell": "0.4.0",
+    "sd-notify": "^2.1.1",
+    "socket.io": "2.0.3",
+    "vmodule": "1.0.1",
+    "yargs": "8.0.2"
   },
   "scripts": {
     "start": "electron ."

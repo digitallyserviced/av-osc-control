@@ -16,7 +16,7 @@ $(document).ready(()=>{
 
     var form = $(`
         <form class="form" id="form">
-            <div class="btn header"><span id="title">Open Stage Control</span> <span id="version">(v${packageVersion})</span><span id="new-version"</div>
+            <div class="btn header"><span id="title">AV OSC Control</span> <span id="version">(v${packageVersion})</span><span id="new-version"</div>
         </form>
     `)
 
@@ -195,14 +195,14 @@ $(document).ready(()=>{
     if (navigator.onLine) {
 
         var request = new XMLHttpRequest();
-        request.open('GET', 'https://api.github.com/repos/jean-emmanuel/open-stage-control/tags', true);
+        request.open('GET', 'https://api.github.com/repos/xcezzz/av-osc-remote/tags', true);
 
         request.onload = function() {
           if (request.status >= 200 && request.status < 400) {
             var data = JSON.parse(request.responseText);
 
             if (data[0].name != 'v' + packageVersion) {
-                $('#new-version').html(` [<a href="${packageUrl}/releases" target="_blank">${data[0].name} is availabe</a>]`)
+                // $('#new-version').html(` [<a href="${packageUrl}/releases" target="_blank">${data[0].name} is availabe</a>]`)
             }
 
           }

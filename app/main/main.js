@@ -1,4 +1,5 @@
 var settings = require('./settings')
+var sdNotify = require('sd-notify')
 
 var cli = false
 for (i in settings.argv) {
@@ -15,9 +16,13 @@ var start = function(readyApp) {
             osc = require('./osc'),
             callbacks = require('./callbacks')
 
+        sdNotify.ready()
+        sdNotify.startWatchdogMode(9500)
+        
         server.bindCallbacks(callbacks)
 
         serverStarted = true
+
         process.on('exit',()=>{
             if (osc.midi) osc.midi.stop()
         })

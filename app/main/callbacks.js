@@ -35,6 +35,12 @@ module.exports =  {
             recentSessions = fs.readdirSync(dir)
             recentSessions = recentSessions.map(function(file){return dir + '/' + file})
         }
+        console.log(settings.read('sessions'))
+        if (settings.read('sessions')){
+            var dir = path.resolve(__dirname + '/../sessions')
+            recentSessions = fs.readdirSync(dir)
+            recentSessions = recentSessions.map(function(file){return dir + '/' + file})
+        }
 
         ipc.send('sessionList',recentSessions,clientId)
     },

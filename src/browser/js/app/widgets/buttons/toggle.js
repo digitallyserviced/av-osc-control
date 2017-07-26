@@ -17,6 +17,7 @@ module.exports = class Toggle extends _widgets_base {
             width:'auto',
             height:'auto',
             color:'auto',
+            preset: 'named',
             css:'',
 
             _osc:'osc',

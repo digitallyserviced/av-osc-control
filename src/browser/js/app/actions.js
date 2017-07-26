@@ -107,6 +107,7 @@ module.exports = {
     },
 
     sessionSave: function() {
+        debugger;
         var sessionfile = JSON.stringify(SESSION,null,'    ')
         var down = $('<a download="'+new Date().toJSON().slice(0,10)+'_'+new Date().toJSON().slice(11,16)+'.js"></a>')
         var blob = new Blob([sessionfile],{type : 'application/x-javascript'})

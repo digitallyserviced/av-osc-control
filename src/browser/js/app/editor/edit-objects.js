@@ -40,7 +40,7 @@ var editObject = function(container, data, refresh){
         } else if (data[i]===undefined) {
             continue
         }
-
+        debugger;
         // Common options edit
         if (i!='widgets' && i!='tabs') {
 

@@ -50,6 +50,12 @@ var options = {
                 true : 'examples can\'t be listed if --load is set'
          }
     },
+    'x':{alias:'sessions',type:'boolean',describe:'list sessions',
+         check: (x,argv)=>{
+             return (!x || !argv.l) ?
+                true : 'sessions can\'t be listed if --load is set'
+         }
+    },
     'url-options':{type:'array',describe:'url options (opt=value pairs)',
         check: (u, argv)=>{
             return (!u || !argv.n) ?
@@ -124,6 +130,7 @@ var makeDefaultConfig = function(argv){
             return appAddresses
         }(),
         examples: argv.e,
+        sessions: argv.x,
         theme: function(){
             if (!argv.t) return
             var style = []
