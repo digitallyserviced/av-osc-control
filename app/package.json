@@ -1,12 +1,12 @@
 {
-  "name": "open-stage-control",
-  "productName": "Open Stage Control",
+  "name": "av-osc-control",
+  "productName": "AV OSC Control",
   "description": "A libre desktop OSC bi-directionnal control surface application.",
   "version": "0.18.0",
   "main": "index.js",
   "author": {
-    "name": "Jean-Emmanuel Doucet / AMMD",
-    "email": "jeannot@ammd.net"
+    "name": "Chris Trocki (original Jean-Emmanuel Doucet / AMMD)",
+    "email": "digitallyserviced@gmail.com"
   },
   "dependencies": {
     "chokidar": "1.7.0",
@@ -33,7 +33,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jean-emmanuel/open-stage-control"
+    "url": "https://github.com/xcezzz/av-osc-control"
   },
   "licence": "GPL-3.0"
 }

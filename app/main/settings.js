@@ -2,7 +2,7 @@
 if (process.argv[1]&&process.argv[1].indexOf('-')==0) process.argv.unshift('')
 
 var baseDir = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'],
-    configFile = require('path').join(baseDir, '.open-stage-control'),
+    configFile = require('path').join(baseDir, '.av-osc-control'),
     fs = require('fs'),
     ifaces = require('os').networkInterfaces()
 
@@ -102,7 +102,7 @@ var makeDefaultConfig = function(argv){
         sessionPath: process.cwd(),
         recentSessions: [],
 
-        appName: 'Open Stage Control',
+        appName: 'AV OSC Control',
         syncTargets: argv.s || false,
         oscInPort: argv.o || 0,
         httpPort: argv.p || 8080,

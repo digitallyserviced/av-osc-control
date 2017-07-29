@@ -51,7 +51,7 @@ var parseArg = function(arg,precision){
 
 var sendOsc = function(data){
 
-	if (!data) return
+	if (!data || !data.address) return
 
     if (data.host == 'midi') {
 
@@ -102,8 +102,10 @@ var customModule = (function(){
 		context = {
 			console: console,
 			sendOsc: sendOsc,
+			Buffer: Buffer,
 			receiveOsc: receiveOsc,
-            setTimeout: setTimeout,
+			setTimeout: setTimeout,
+			setInterval: setInterval,
             settings: settings
 		}
 

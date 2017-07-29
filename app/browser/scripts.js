@@ -1,13 +1,13 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 module.exports={
-  "name": "open-stage-control",
-  "productName": "Open Stage Control",
+  "name": "av-osc-control",
+  "productName": "AV OSC Control",
   "description": "A libre desktop OSC bi-directionnal control surface application.",
   "version": "0.18.0",
   "main": "index.js",
   "author": {
-    "name": "Jean-Emmanuel Doucet / AMMD",
-    "email": "jeannot@ammd.net"
+    "name": "Chris Trocki (original Jean-Emmanuel Doucet / AMMD)",
+    "email": "digitallyserviced@gmail.com"
   },
   "dependencies": {
     "chokidar": "1.7.0",
@@ -34,7 +34,7 @@ module.exports={
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jean-emmanuel/open-stage-control"
+    "url": "https://github.com/xcezzz/av-osc-control"
   },
   "licence": "GPL-3.0"
 }
